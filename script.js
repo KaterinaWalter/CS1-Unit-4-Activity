@@ -1,19 +1,20 @@
-// Create a boolean variable to track the mode
+// Create a boolean variable to track current mode
 let darkMode = false;
 
 /* NEW JS FUNCTION: document.querySelector()
-   lets you select an HTML element and store
-   the reference in a variable for JS to use
+   lets us SELECT an HTML ELEMENT and store
+   a reference to it in a VARIABLE
 */
 
+// select by tag type
 const body = document.querySelector("body");
+// heading is a VARIABLE that points to the h1 ELEMENT with an id="main-heading" -> just like CSS selection!
 const heading = document.querySelector("#main-heading");
 const description = document.querySelector("#description");
 const toggleBtn = document.querySelector("#toggle");
-// CONST is like LET, but the value won't change
 
-// JS can now change attributes & properties!
-heading.textContent = "Light & Dark Website"; // JS wrote HTML code!
-heading.style.color = "purple"; // JS wrote CSS code!
+// JS can now change attributes & properties 
+heading.textContent = "Light & Dark Mode Website"; 
+heading.style.color = "purple"; 
 
 
