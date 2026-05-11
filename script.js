@@ -11,6 +11,7 @@ const body = document.querySelector("body");
 const heading = document.querySelector("#main-heading");
 const description = document.querySelector("#description");
 const toggleBtn = document.querySelector("#toggle");
+const image = document.querySelector("#image");
 
 // JS can now change attributes & properties 
 heading.textContent = "Light & Dark Mode Website"; 
@@ -31,6 +32,7 @@ function toggleMode() {
       description.style.color = "white";
       description.textContent = "Welcome to the dark side 🌙💫";
       toggleBtn.textContent = "Switch to Light";
+      image.src = "dark.png";
    }
    else {
       console.log("apply light styles");
@@ -39,8 +41,31 @@ function toggleMode() {
       description.style.color = "black";
       description.textContent = "Welcome to the bright side 🌈☀️";
       toggleBtn.textContent = "Switch to Dark";
+      image.src = "light.png";
    }
 }
 
 // Attach function to the actual button
 toggleBtn.addEventListener("click", toggleMode);
+
+
+
+
+
+
+// REVIEW
+// 1. Select the new element on the page (by id name)
+const hackerBtn = document.querySelector("#hacker");
+// 2. Attach click event listener to the button
+hackerBtn.addEventListener("click", setHacker);
+// 3. Define the function that triggers when clicked
+function setHacker() {
+   console.log("setting hacker theme...");
+   body.style.background = "rgb(0,0,0)";
+   body.style.color = "rgb(9, 255, 83)";
+   body.style.fontFamily = "monospace";
+   description.textContent = "YOU HAVE BEEN HACKED!";
+}
+
+
+
