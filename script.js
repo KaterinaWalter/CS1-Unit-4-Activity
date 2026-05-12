@@ -53,19 +53,25 @@ toggleBtn.addEventListener("click", toggleMode);
 
 
 
+
 // REVIEW
-// 1. Select the new element on the page (by id name)
+// 1. Select an element to target (button)
 const hackerBtn = document.querySelector("#hacker");
-// 2. Attach click event listener to the button
+// 2. Attach a function to the button
 hackerBtn.addEventListener("click", setHacker);
-// 3. Define the function that triggers when clicked
+// 3. Define what happens when triggered
 function setHacker() {
-   console.log("setting hacker theme...");
-   body.style.background = "rgb(0,0,0)";
-   body.style.color = "rgb(9, 255, 83)";
+   body.style.background = "black";
    body.style.fontFamily = "monospace";
-   description.textContent = "YOU HAVE BEEN HACKED!";
+   description.style.color = "rgb(0, 160, 8)";
+   description.textContent = "YOU GOT HACKED :(";
+   image.src = "hackerman.webp";
 }
+
+
+
+
+
 
 
 
