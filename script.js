@@ -52,21 +52,30 @@ toggleBtn.addEventListener("click", toggleMode);
 
 
 
-
-
 // REVIEW
-// 1. Select an element to target (button)
+// 1. Select an HTML element for JS to target
 const hackerBtn = document.querySelector("#hacker");
-// 2. Attach a function to the button
-hackerBtn.addEventListener("click", setHacker);
-// 3. Define what happens when triggered
-function setHacker() {
-   body.style.background = "black";
+// 2. Attach click event listener to trigger a function
+hackerBtn.addEventListener("click", setHackerMode);
+// 3. Define what happens when event triggers function
+function setHackerMode() {
+   body.style.background = "linear-gradient(black, grey)";
    body.style.fontFamily = "monospace";
-   description.style.color = "rgb(0, 160, 8)";
-   description.textContent = "YOU GOT HACKED :(";
+   description.style.color = "rgb(64, 255, 0)";
+   description.textContent = "YOU HAVE BEEN HACKED ☹️";
    image.src = "hackerman.webp";
+   heading.textContent = "UH OH!";
+   // MORE CSS IDEAS:
+   heading.style.background = "url(neonlights.jpg)";
+   heading.style.backgroundSize = "cover";
+   heading.style.margin = "20px";
+   heading.style.textShadow = "0px 0px 5px white";
+   heading.style.boxShadow = "0px 0px 10px hotpink";
+   heading.style.border = "2px solid white";
+   heading.style.borderRadius = "5px";
 }
+
+
 
 
 
