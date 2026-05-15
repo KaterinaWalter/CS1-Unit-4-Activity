@@ -12,6 +12,7 @@ const heading = document.querySelector("#main-heading");
 const description = document.querySelector("#description");
 const toggleBtn = document.querySelector("#toggle");
 const image = document.querySelector("#image");
+const emoji = document.querySelector("#emoji");
 
 // JS can now change attributes & properties 
 heading.textContent = "Light & Dark Mode Website"; 
@@ -33,6 +34,7 @@ function toggleMode() {
       description.textContent = "Welcome to the dark side 🌙💫";
       toggleBtn.textContent = "Switch to Light";
       image.src = "dark.png";
+      emoji.classList.remove("animated");
    }
    else {
       console.log("apply light styles");
@@ -42,6 +44,7 @@ function toggleMode() {
       description.textContent = "Welcome to the bright side 🌈☀️";
       toggleBtn.textContent = "Switch to Dark";
       image.src = "light.png";
+      emoji.classList.remove("animated");
    }
 }
 
@@ -73,6 +76,7 @@ function setHackerMode() {
    heading.style.boxShadow = "0px 0px 10px hotpink";
    heading.style.border = "2px solid white";
    heading.style.borderRadius = "5px";
+   emoji.classList.add("animated");
 }
 
 
